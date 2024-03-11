@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Unit Converter</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Add any additional CSS files or styles here -->
+    <style>
+        /* Unit Converter Styles */
+        body {
+            font-family: 'Shadows Into Light', cursive;
+            background-color: #ffe4e1; /* Light pink background */
+            color: #333;
+        }
+
+        .unit-converter-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            background-color: #fff; /* White background for the Unit Converter */
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .unit-input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .unit-button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .unit-button:hover {
+            background-color: #45a049;
+        }
+
+        .unit-result {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Unit Converter Section -->
+<div class="unit-converter-container w3-container">
+    <h2>Unit Converter</h2>
+    <label for="unitInput">Value: </label>
+    <input type="text" id="unitInput" class="unit-input" placeholder="Enter value">
+    <button onclick="convertUnits('cmToMeter')" class="unit-button">cm to Meter</button>
+    <button onclick="convertUnits('meterToCm')" class="unit-button">Meter to cm</button>
+    <button onclick="convertUnits('meterToKm')" class="unit-button">Meter to km</button>
+    <button onclick="convertUnits('kmToMeter')" class="unit-button">km to Meter</button>
+    <button onclick="convertUnits('celsiusToFahrenheit')" class="unit-button">Celsius to Fahrenheit</button>
+    <button onclick="convertUnits('fahrenheitToCelsius')" class="unit-button">Fahrenheit to Celsius</button>
+    <div id="unitResult" class="unit-result"></div>
+</div>
+
+<!-- JavaScript for Unit Converter -->
+<script>
+    function convertUnits(unitType) {
+        var inputValue = parseFloat(document.getElementById('unitInput').value);
+
+        if (isNaN(inputValue)) {
+            alert('Please enter a valid numerical value.');
+            return;
+        }
+
+        var result;
+        switch (unitType) {
+            case 'cmToMeter':
+                result = inputValue / 100;
+                break;
+            case 'meterToCm':
+                result = inputValue * 100;
+                break;
+            case 'meterToKm':
+                result = inputValue / 1000;
+                break;
+            case 'kmToMeter':
+                result = inputValue * 1000;
+                break;
+            case 'celsiusToFahrenheit':
+                result = (inputValue * 9/5) + 32;
+                break;
+            case 'fahrenheitToCelsius':
+                result = (inputValue - 32) * 5/9;
+                break;
+            default:
+                alert('Invalid unit conversion type.');
+                return;
+        }
+
+        document.getElementById('unitResult').innerHTML = 'Result: ' + result.toFixed(2);
+        alert('Result: ' + result.toFixed(2));
+    }
+</script>
+
+</body>
+</html>
+

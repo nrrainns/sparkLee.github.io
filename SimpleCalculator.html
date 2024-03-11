@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Simple Calculator</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Add any additional CSS files or styles here -->
+    <style>
+        /* Calculator Styles */
+        body {
+            font-family: 'Shadows Into Light', cursive;
+            background-color: #ffe4e1; /* Light pink background */
+            color: #333;
+        }
+
+        .calculator-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            background-color: #fff; /* White background for the calculator */
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .calculator-input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .calculator-button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .calculator-button:hover {
+            background-color: #45a049;
+        }
+
+        .calculator-result {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Calculator Section -->
+    <div class="calculator-container w3-container">
+        <h2>Simple Calculator</h2>
+        <input type="text" id="calculator-input" class="calculator-input" placeholder="Enter expression">
+        <button onclick="calculate()" class="calculator-button">Calculate</button>
+        <div id="calculator-result" class="calculator-result"></div>
+    </div>
+
+    <!-- JavaScript for Simple Calculator -->
+    <script>
+        function calculate() {
+            var input = document.getElementById('calculator-input').value;
+            try {
+                var result = eval(input);
+                document.getElementById('calculator-result').innerHTML = 'Result: ' + result;
+            } catch (error) {
+                alert('Invalid input. Please enter a valid expression.');
+            }
+        }
+    </script>
+
+</body>
+</html>

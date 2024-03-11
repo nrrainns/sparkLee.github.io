@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Income Tax Calculator</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Add any additional CSS files or styles here -->
+    <style>
+        /* Income Tax Calculator Styles */
+        body {
+            font-family: 'Shadows Into Light', cursive;
+            background-color: #ffe4e1; /* Light pink background */
+            color: #333;
+        }
+
+        .tax-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            background-color: #fff; /* White background for the Income Tax Calculator */
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .tax-input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .tax-button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .tax-button:hover {
+            background-color: #45a049;
+        }
+
+        .tax-result {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Income Tax Calculator Section -->
+    <div class="tax-container w3-container">
+        <h2>Income Tax Calculator</h2>
+        <label for="income">Annual Income: </label>
+        <input type="text" id="income" class="tax-input" placeholder="Enter annual income">
+        <button onclick="calculateTax()" class="tax-button">Calculate Tax</button>
+        <div id="tax-result" class="tax-result"></div>
+    </div>
+
+    <!-- JavaScript for Income Tax Calculator -->
+    <script>
+        function calculateTax() {
+            var income = parseFloat(document.getElementById('income').value);
+
+            if (isNaN(income) || income <= 0) {
+                alert('Please enter a valid annual income.');
+                return;
+            }
+
+            // Perform tax calculation logic here
+            // This is a simple example, you may need to implement more complex logic
+
+            var tax = income * 0.2; // 20% tax rate for demonstration
+            document.getElementById('tax-result').innerHTML = 'Tax: ' + tax.toFixed(2);
+
+            // Optionally, you can add alerts as well
+            alert('Tax: ' + tax.toFixed(2));
+        }
+    </script>
+
+</body>
+</html>

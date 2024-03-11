@@ -1,0 +1,200 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Main Page</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!-- Add any additional CSS files or styles here -->
+    <style>
+         /* Header Styles */
+        body {
+            font-family: 'Shadows Into Light', cursive;
+            background-color: #ffe4e1; /* Light pink background */
+            color: #333;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffc0cb; /* Pink header background */
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .header-title {
+            font-size: 28px;
+            margin: 0;
+            color: #fff; /* White text color */
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            margin-right: 20px;
+            font-size: 18px;
+        }
+
+        .nav-links a:hover {
+            color: #ff69b4; /* Hot pink on hover */
+        }
+
+        /* About Me Styles */
+        .about-me-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff; /* White background for the about me section */
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .about-me-text {
+            max-width: 60%;
+            text-align: left;
+			
+        }
+		
+		h2 { 
+			color: #ff69b4;
+		}
+		
+        .about-me-img {
+            max-width: 20%;
+            border-radius: 10px;
+        }
+
+        /* Home Section Styles */
+        .home-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .tool-card {
+            width: 30%;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff; /* White background for tool cards */
+            border-radius: 10px;
+        }
+
+        .tool-link {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .tool-link:hover {
+            color: #ff69b4; /* Hot pink on hover */
+        }
+		
+		 /* Personal Information Section Styles */
+        .personal-info-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff; /* White background for the card */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .personal-info-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ff69b4; /* Hot pink title color */
+        }
+
+        .personal-info-details {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .personal-info-link {
+            text-decoration: none;
+            color: #4CAF50; /* Green link color */
+            font-weight: bold;
+        }
+
+        .personal-info-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+	
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header-container w3-container">
+        <h1 class="header-title">Nurain Azmi</h1>
+        <div class="nav-links">
+            <a href="Main.html">Home</a>
+            <a href="SimpleCalculator.html">Simple Calculator</a>
+            <a href="BMIChecker.html">BMI Checker</a>
+            <a href="IncomeTaxCalculator.html">Income Tax Calculator</a>
+            <a href="UnitConverter.html">Unit Converter</a>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <div class="about-me-container w3-container">
+        <div class="about-me-text">
+            <h2>About Me</h2>
+            <p>
+                Welcome to my personal website! I am passionate about working and learning in Computer Science major. 
+                Here, you can find information about my academic background, personal interests, and more. 
+                Feel free to explore and get to know me better!
+            </p>
+        </div>
+        <img src="NURAIN pic.jpeg" alt="Your Picture" class="about-me-img">
+    </div>
+	 <!-- Personal Information Section -->
+    <div class="personal-info-container w3-container">
+        <h2 class="personal-info-title">Personal Information</h2>
+        <div class="personal-info-details">
+            <p>
+                Matric: A22DW0348 <br>
+                Program: Diploma in Computer Science<br>
+                Section: Section 39<br>
+                Name: Nurain Azmi <br>
+                <!-- Link to view CV in HTML -->
+                <a href="CV.html" class="personal-info-link">View CV (HTML)</a> <br>
+                <!-- Link to download CV in PDF -->
+                <a href="https://drive.google.com/file/d/1F2Q3umQzYgWpGxrCW6AQ04xASJLfKV9I/view?usp=drive_link" download class="personal-info-link">Download CV (PDF)</a>
+            </p>
+        </div>
+    </div>
+	<!-- Home Section -->
+    <div class="home-section w3-container">
+        <div class="tool-card">
+            <h2>Simple Calculator</h2>
+            <p>Perform basic calculations with our simple calculator.</p>
+            <a href="SimpleCalculator.html" class="tool-link">Go to Simple Calculator</a>
+        </div>
+        <div class="tool-card">
+            <h2>BMI Checker</h2>
+            <p>Check your BMI with our handy calculator.</p>
+            <a href="BMIChecker.html" class="tool-link">Go to BMI Checker</a>
+        </div>
+        <div class="tool-card">
+            <h2>Income Tax Calculator</h2>
+            <p>Calculate your income tax easily.</p>
+            <a href="IncomeTaxCalculator.html" class="tool-link">Go to Income Tax Calculator</a>
+        </div>
+        <div class="tool-card">
+            <h2>Unit Converter</h2>
+            <p>Convert between different units effortlessly.</p>
+            <a href="UnitConverter.html" class="tool-link">Go to Unit Converter</a>
+        </div>
+    </div>
+    
+
+  
+
+</body>
+</html>
